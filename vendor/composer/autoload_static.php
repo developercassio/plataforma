@@ -6,8 +6,18 @@ namespace Composer\Autoload;
 
 class ComposerStaticInit5517a262b864ba903dc096687763b0a9
 {
-    public static $fallbackDirsPsr4 = array (
-        0 => __DIR__ . '/..' . '/nortesoft/php-classes/src',
+    public static $prefixLengthsPsr4 = array (
+        'N' => 
+        array (
+            'Nortesoft\\' => 10,
+        ),
+    );
+
+    public static $prefixDirsPsr4 = array (
+        'Nortesoft\\' => 
+        array (
+            0 => __DIR__ . '/..' . '/nortesoft/php-classes/src',
+        ),
     );
 
     public static $prefixesPsr0 = array (
@@ -41,7 +51,8 @@ class ComposerStaticInit5517a262b864ba903dc096687763b0a9
     public static function getInitializer(ClassLoader $loader)
     {
         return \Closure::bind(function () use ($loader) {
-            $loader->fallbackDirsPsr4 = ComposerStaticInit5517a262b864ba903dc096687763b0a9::$fallbackDirsPsr4;
+            $loader->prefixLengthsPsr4 = ComposerStaticInit5517a262b864ba903dc096687763b0a9::$prefixLengthsPsr4;
+            $loader->prefixDirsPsr4 = ComposerStaticInit5517a262b864ba903dc096687763b0a9::$prefixDirsPsr4;
             $loader->prefixesPsr0 = ComposerStaticInit5517a262b864ba903dc096687763b0a9::$prefixesPsr0;
             $loader->classMap = ComposerStaticInit5517a262b864ba903dc096687763b0a9::$classMap;
 
